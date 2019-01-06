@@ -1,0 +1,54 @@
+.body {
+  font-family: Helvetica;
+}
+
+.content {
+  padding: 2% 10% 2% 10%;;
+}
+
+.img-logo {
+  width: 100%;
+}
+
+.slider {
+  margin: 20px 0 20px 0;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  background: #e52b8e;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #e52b8e;
+}
+
+.programmes {
+  width: 100%;
+}
+
+.programmes-images {
+  width: 40px;
+  height: 150px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid;
+}
+
+.programmes-title {
+  text-align: center;
+}
