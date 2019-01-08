@@ -1,51 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./content/css/style.css" />
-    <title>Sky Moodslider</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Moodslider</title>
   </head>
-  <body>
 
-    <nav>
-
-    </nav>
-    <header>
-
-
-    </header>
-
-    <div class="content">
-      <div class="row">
-        <div class="col-2">
-            <img class="img-logo" src="./content/images/logo.jpg" />
-        </div>
-        <div class="col-6">
-              <h1 class="title">Sky - Moodslider</h1>
-              <label for="uid">Upload Content</label>
-              <input id="uid" type="text" class="form-control" name="username">
-        </div>
+<body>
+  <header>
+    <div class="row">
+      <div class="col-3">
+          <img id="logo" class="img-logo" src="./content/images/logo.png" />
       </div>
+      <nav class="col-8">
+        <a href="#logo">HOME</a> |
+        <a href="#upload">UPLOAD CONTENT</a> |
+        <a href="#sliders">MOOD</a> |
+        <a href="#programmes">SUGGESTED SHOWS</a>
+      </nav>
+  </header>
 
-
-        <!-- Upload Section -->
-        <div class="row">
-          <div class="col-10">
-            <div class="form-group">
-
-            </div>
-          </div>
+  <div class="content">
+    <div class="welcome">
+      <div class="w3-animate-left">
+          <h2 > Welcome to Moodslider.</h2>
+          <h4 class="mood"> What are you in the mood for?</h4>
+          <a href="#sliders" id="next"></a>
         </div>
+        <div class="w3-animate-right">
+          <input id="upload" class="upload-content" type="file" onchange='readText(this)' />
+        </div>
+    </div>
+    
+    <hr />
 
-        <!--Sliders -->
+    <!-- Mood Sliders -->
+    <!-- Each slider triggers a function -->
+    <div clas="container">
+      <h4 id="sliders-paragraph"> Try uploading some content first. </h4>
+        <!--4 Mood Sliders -->
+        <div id="sliders">
         <div class="row">
           <div class="col-1">
-            <span>Agittated</span>
+            <span>Agitated</span>
           </div>
           <div class="col-8">
-            <input type="range" min="1" max="100" value="50" class="slider">
+            <input name="aggitated-calm" type="range" min="0" max="2" value="1" class="slider" onchange="agitatedCalmProgrammes(value)">
           </div>
           <div class="col-2">
             <span>Calm</span>
@@ -56,7 +59,7 @@
             <span>Happy</span>
           </div>
           <div class="col-8">
-            <input type="range" min="1" max="100" value="50" class="slider">
+            <input name="happy-sad" type="range" min="0" max="2" value="1" class="slider" onchange="happySadProgrammes(value)">
           </div>
           <div class="col-2">
             <span>Sad</span>
@@ -67,7 +70,7 @@
               <span>Tired</span>
             </div>
             <div class="col-8">
-              <input type="range" min="1" max="100" value="50" class="slider">
+            <input name="tired-wideawake" type="range" min="0" max="2" value="1" class="slider" onchange="tiredWideAwakeProgrammes(value)">
             </div>
             <div class="col-2">
               <span>Wide Awake</span>
@@ -78,35 +81,35 @@
             <span>Scared</span>
           </div>
           <div class="col-8">
-            <input type="range" min="1" max="100" value="50" class="slider">
+            <input name="scared-fearless" type="range" min="0" max="2" value="1" class="slider" onchange="scaredFearlessProgrammes(value)">
           </div>
           <div class="col-2">
             <span>Fearless</span>
           </div>
         </div>
-
+      </div>
 
         <!-- Table of programmes -->
-        <table class="programmes">
+        <table id="programmes" class="programmes">
             <tr>
-              <td class=programmes-images><img class="" src="" /></td>
-              <td class=programmes-images><img class="" src="" /></td>
-              <td class=programmes-images><img class="" src="" /></td>
-              <td class=programmes-images><img class="" src="" /></td>
-              <td class=programmes-images><img class="" src="" /></td>
+              <td id="element1" class="programmes-table"><img id =image1 class="programmes-images" src="" /></td>
+              <td id="element2" class="programmes-table"><img id =image2 class="programmes-images" src="" /></td>
+              <td id="element3" class="programmes-table"><img id =image3 class="programmes-images" src="" /></td>
+              <td id="element4" class="programmes-table"><img id =image4 class="programmes-images" src="" /></td>
+              <td id="element5" class="programmes-table"><img id =image5 class="programmes-images" src="" /></td>
             </tr>
+            <!-- Initialise with No Content -->
             <tr class="programmes-title">
-              <td>Name</td>
-              <td>Name</td>
-              <td>Name</td>
-              <td>Name</td>
-              <td>Name</td>
+              <td id="description1">No Content</td>
+              <td id="description2">No Content</td>
+              <td id="description3">No Content</td>
+              <td id="description4">No Content</td>
+              <td id="description5">No Content</td>
             </tr>
         </table>
-
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./content/js/script.js"></script>
   </body>
 </html>

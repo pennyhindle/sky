@@ -3,13 +3,66 @@
 }
 
 .content {
-  padding: 2% 10% 2% 10%;;
+  padding: 2% 10% 2% 10%;
+  margin: auto;
 }
 
 .img-logo {
   width: 100%;
 }
 
+header{
+  padding: 2% 10% 2% 10%;
+  margin: auto;
+}
+
+h2{
+  padding: 40px 0 40px 0;
+}
+
+h4{
+  padding: 40px 0 40px 0;
+}
+
+.welcome{
+  padding: 10% 0 8% 0;
+  min-height: 600px;
+}
+.w3-animate-left{
+  float: left;
+}
+
+.w3-animate-right{
+  float: right;
+  min-height: 300px;
+  background-image: url("../images/background.png");
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.background-img {
+  max-width: 400px;
+  position:absolute;
+}
+
+.upload-content{
+  padding: 30% 70% 0 0;
+  float:right
+}
+
+nav a{
+  padding: 0 3% 0 3%;
+}
+
+/*Sky's link colour */
+#next {
+  color: #c10068;
+}
+/* SlidersCSS */
+.sliders {
+  padding-bottom: 5%;
+}
 .slider {
   margin: 20px 0 20px 0;
   -webkit-appearance: none;
@@ -28,25 +81,31 @@
   border-radius: 10px;
   width: 20px;
   height: 20px;
-  background: #e52b8e;
+  background: #c10068;
 }
 
 .slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #e52b8e;
+  background: #c10068;
 }
 
+/* Table CSS*/
 .programmes {
   width: 100%;
+  padding-top: 50px;
 }
 
-.programmes-images {
-  width: 40px;
-  height: 150px;
+.programmes-table {
+  text-align: center;
   padding: 5px;
   margin: 5px;
   border: 1px solid;
+  height: 300px;
+}
+
+.programmes-images {
+  max-width: 200px;
 }
 
 .programmes-title {
